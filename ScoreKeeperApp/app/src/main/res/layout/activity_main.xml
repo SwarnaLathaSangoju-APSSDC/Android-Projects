@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="2"
+    tools:context="com.example.sango.scorekeeperapp.MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+
+    android:layout_weight="1">
+    <TextView
+        android:id="@+id/tv_team1"
+        android:layout_marginTop="61dp"
+        android:text="@string/team1Name"
+        style="@style/title_team"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="@style/PlusButtons"
+        android:onClick="plus_team1"/>
+
+    <ImageButton
+        android:id="@+id/ib_tm1_dec"
+        style="@style/MinusButtons"
+        android:onClick="minus_team1" />
+
+    <TextView
+        android:id="@+id/tm1_score"
+        android:layout_alignBottom="@+id/ib_tm1_dec"
+        style="@style/ScoreText"
+        android:text="@string/Score"
+        />
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/tv_team2"
+            android:layout_marginTop="61dp"
+            android:text="@string/team2Name"
+            style="@style/title_team"
+
+            />
+
+        <ImageButton
+            android:id="@+id/ib_tm2_inc"
+            style="@style/PlusButtons"
+            android:onClick="plus_team2"/>
+
+        <ImageButton
+            android:id="@+id/ib_tm2_dec"
+            style="@style/MinusButtons"
+            android:onClick="minus_team2" />
+
+        <TextView
+            android:id="@+id/tm2_score"
+            android:layout_alignBottom="@+id/ib_tm2_dec"
+            style="@style/ScoreText"
+            android:text="@string/Score"
+            />
+
+    </RelativeLayout>
+    
+</LinearLayout>
